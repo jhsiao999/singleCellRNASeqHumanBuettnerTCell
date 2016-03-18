@@ -12,26 +12,18 @@ TBA
   by sample matrix. \code{phenoData} slot contains sample information 
   as described below. \code{featureData} slot contains row information
   which are usually ensemebl gene ID or gene symbols.
-  \describe{ 
-  \item{\code{}:}{The
-  CEL filename in the Gene Expression Omnibus (GEO)}
-  \item{\code{DB_ID}:}{The GSM sample id in GEO}
-  \item{\code{ExperimentID}:}{The GSE experiment id in GEO}
-  \item{\code{Tissue}:}{Tissue type, obtained from the gene
-  expression barcode annotation}
-  \item{\code{SubType}:}{Sample sub-type, obtained from the
-  gene expression barcode annotation}
-  \item{\code{ClinicalGroup}:}{Clinical sample annotation,
-  obtained from the gene expression barcode annotation}
-  \item{\code{Status}:}{Normal (0) or Cancer (1) indicator}
-  }
 }
 \examples{
-#data(singleCellData)
-#assay(singleCellData)
+data(MouseBuettnerESC)
+# load count data
+exprs(MouseBuettnerESC)
+# load phenotype data
+pData(MouseBuettnerESC)
 }
 \references{
-doi:10.1038/nbt.3102
+Florian Buettner, Kedar N Natarajan, F Paolo Casale, Valentina Proserpio,
+Antonio Sciladone, Fabian J Theis, Sarah A Teichmann, John C Marioni, & Oliver Stegal. Computational analysis of cell-to-cell heterogeneity in single-cell RNA-sequencing data 
+reveals hidden subpopulation of cells. Nature 33:2, 155-160 (2015) DOI: 10.1038/nbt.3102
 }
 \seealso{
   \code{\link{ExpressionSet}} for the class definition
